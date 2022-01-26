@@ -1,0 +1,131 @@
+
+html {
+  --black: #000000;
+  --white: #FFFFFF;
+  --red: #E93D44;
+  --primary: #E93D44;
+  --primary-contrast: #FFFFFF;
+  --background-color: #121212;
+
+  --gray: #9E9E9E;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+
+  --cool-gray: #607D8B;
+  --cool-gray-50: #ECEFF1;
+  --cool-gray-100: #CFD8DC;
+  --cool-gray-200: #B0BEC5;
+  --cool-gray-300: #90A4AE;
+  --cool-gray-400: #78909C;
+  --cool-gray-500: #607D8B;
+  --cool-gray-600: #546E7A;
+  --cool-gray-700: #455A64;
+  --cool-gray-800: #37474F;
+  --cool-gray-900: #263238;
+
+  --text-color: var(--gray-300);
+  background-color: var(--background-color);
+  font-family: Lato, Dosis, sans-serif;
+}
+
+
+html {
+  --max-width: 308px;
+  --header-height: 60px;
+  --content-height: calc(100vh - var(--header-height));
+  --content-width: calc(100vw - var(--max-width));
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1250px) {
+  html {
+    --max-width: 616px;
+    --header-height: 60px;
+    --content-height: calc(100vh - var(--header-height));
+    --content-width: calc(100vw - var(--max-width));
+    font-size: 14px;
+  }
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.35em;
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  margin: 0;
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  margin: 0;
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  margin: 0;
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  font-family: Dosis, sans-serif;
+  margin: 0;
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+}
+
+small {
+  font-size: 0.8rem;
+  font-family: Dosis, sans-serif;
+  margin: 0;
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+}
+
+label {
+  font-size: 0.8rem;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,19 @@
+
+.date-button-component {
+  width: auto;
+  height: 36px;
+  border: 2px solid var(--text-color);
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.date-button-component:active {
+  background-color: var(--text-color);
+  color: var(--black);
+}

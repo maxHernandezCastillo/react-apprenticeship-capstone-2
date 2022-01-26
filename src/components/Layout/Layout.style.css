@@ -1,0 +1,12 @@
+
+.layout-component {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-component__content {
+  width: 100%;
+  min-height: calc(100vh - var(--header-height));
+}

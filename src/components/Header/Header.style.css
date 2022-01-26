@@ -1,0 +1,94 @@
+
+.header-component {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  height: var(--header-height);
+  background-color: var(--gray-800);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-component__loading {
+  opacity: 0.0;
+  width: 100%;
+  height: 2px;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-name: loadingBar;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, rgb(255, 0, 0, 0) 15%, var(--primary) 50%, rgb(255, 0, 0, 0) 85%);
+}
+
+@keyframes loadingBar {
+  0% {
+    background-position: 0vh 0;
+  }
+  100% {
+    background-position: 150vh 0;
+  }
+}
+
+.header-component__loading--show {
+  opacity: 1.0;
+}
+
+.header-component__content {
+  width: calc(100% - 48px);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0px 24px;
+}
+
+.header-component__nasa-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-color);
+  user-select: none;
+  cursor: pointer;
+}
+
+.header-component__nasa-info:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.header-component__nasa-logo {
+  height: 48px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.header-component__wizeline-logo {
+  height: 36px;
+  user-select: none;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.header-component__wizeline-logo:hover {
+  height: 48px;
+}
+
+.header-component__title {
+  text-align: center;
+  flex-grow: 1;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.header-component__right-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}

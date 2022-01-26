@@ -1,0 +1,23 @@
+
+.sidebar-component {
+  width: var(--max-width);
+  height: calc(var(--content-height) - 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 48px;
+  padding: 24px 12px;
+  background-color: var(--cool-gray-900);
+}
+
+@media (width <= 720px) {
+  .sidebar-component {
+    width: 100%;
+    height: min-content;
+  }
+}
+
+.sidebar-component--closed {
+  display: none;
+}

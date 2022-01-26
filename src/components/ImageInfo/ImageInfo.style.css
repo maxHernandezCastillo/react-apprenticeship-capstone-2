@@ -1,0 +1,32 @@
+
+.image-info {
+  min-height: calc(250px - 24px);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--cool-gray-800);
+  overflow-y: scroll;
+}
+
+@media (width <= 720px) {
+  .image-info {
+    width: 100%;
+    height: min-content;
+    overflow-y: visible;
+  }
+}
+
+.image-info::-webkit-scrollbar {
+  width: 4px;
+}
+
+.image-info::-webkit-scrollbar-track {
+  background-color: var(--cool-gray-500);
+}
+
+.image-info::-webkit-scrollbar-thumb {
+  background-color: var(--cool-gray-200);
+  outline: 1px solid var(--cool-gray-200);
+}

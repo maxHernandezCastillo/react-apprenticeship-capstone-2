@@ -1,0 +1,86 @@
+.date-chooser-cards-component {
+  width: 100%;
+  height: calc(var(--content-height) - 250px - 48px - 48px - 24px - 48px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-auto-rows: 150px;
+  grid-auto-flow: row;
+  grid-gap: 12px;
+  justify-content: center;
+  padding: 12px 0px;
+  overflow-y: scroll;
+}
+
+.date-chooser-cards-component::-webkit-scrollbar {
+  width: 4px;
+}
+
+.date-chooser-cards-component::-webkit-scrollbar-track {
+  background-color: var(--cool-gray-500);
+}
+
+.date-chooser-cards-component::-webkit-scrollbar-thumb {
+  background-color: var(--cool-gray-200);
+  outline: 1px solid var(--cool-gray-200);
+}
+
+.date-chooser-cards-component__card {
+  border-radius: 12px;
+  border: 1px solid var(--cool-gray-400);
+  cursor: pointer;
+  user-select: none;
+}
+
+.date-chooser-cards-component__card--empty {
+  border-radius: 12px;
+  background-color: var(--cool-gray-400);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-chooser-cards-component__card .date-chooser-cards-component__card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(55%) contrast(95%) blur(1px);
+}
+
+.date-chooser-cards-component__card:hover .date-chooser-cards-component__card-image {
+  filter: contrast(100%);
+}
+
+.date-chooser-cards-component__card .date-chooser-cards-component__card-title {
+  position: relative;
+  left: calc(50% - 1rem);
+  top: calc(-50% - 1rem);
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  width: fit-content;
+  height: fit-content;
+  margin: 0px;
+  color: var(--cool-gray-50);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-chooser-cards-component__card--empty .date-chooser-cards-component__card-title--empty {
+  color: var(--cool-gray-50);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-chooser-cards-component__card--loading {
+  user-select: none;
+  border-radius: 12px;
+  background-color: var(--cool-gray-800);
+}

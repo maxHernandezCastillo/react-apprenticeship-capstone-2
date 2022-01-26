@@ -1,0 +1,1 @@
+export { default } from './ImageInfo.component.jsx';
