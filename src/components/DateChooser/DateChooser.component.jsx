@@ -2,18 +2,15 @@ import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './DateChooser.style.css';
-import { useGlobalContext } from '@providers/GlobalContext';
 import useGetPicturesOfMonth from '@hooks/useGetPicturesOfMonth';
 import DateChooseCards from './DateChooseCards.components';
 import IconButton from '@components/IconButton';
-import ImageInfo from '@components/ImageInfo';
 
 const formatter = new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric' });
 
 function DateChooser(props) {
   let { className } = props;
   let [items, setItems] = useState([]);
-  const { isDateChooserOpen } = useGlobalContext();
   let [ dateString, setDateString ] = useState(() => new Date().toISOString());
   let { response, loading } = useGetPicturesOfMonth(dateString);
 
@@ -46,7 +43,7 @@ function DateChooser(props) {
   return (
     <div
       data-testid={props['data-testid']}
-      className={ `date-chooser-component ${className} ${(isDateChooserOpen ? '' : 'date-chooser-component--closed')}` }
+      className={ `date-chooser-component ${className}` }
     >
       <div className='date-chooser-component__header'>
         <IconButton

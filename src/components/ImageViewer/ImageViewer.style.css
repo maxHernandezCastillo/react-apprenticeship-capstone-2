@@ -9,7 +9,6 @@
 .image-viewer-component__image {
   max-width: 100%;
   max-height: var(--content-height);
-  pointer-events: none;
   user-select: none;
 }
 

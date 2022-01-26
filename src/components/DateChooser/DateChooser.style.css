@@ -15,10 +15,6 @@
   }
 }
 
-.date-chooser-component--closed {
-  display: none;
-}
-
 .date-chooser-component__header {
   width: 100%;
   height: 48px;
