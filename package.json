@@ -3,25 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "test:coverage": "craco test src --coverage",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -34,5 +36,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "lines": 100
+      }
+    },
+    "moduleNameMapper": {
+      "^@src(.*)$": "<rootDir>/src/$1",
+      "^@components(.*)$": "<rootDir>/src/components/$1",
+      "^@pages(.*)$": "<rootDir>/src/pages/$1",
+      "^@providers(.*)$": "<rootDir>/src/providers/$1",
+      "^@hooks(.*)$": "<rootDir>/src/hooks/$1",
+      "^@storages(.*)$": "<rootDir>/src/storages/$1",
+      "^@utils(.*)$": "<rootDir>/src/utils/$1",
+      "^@style(.*)$": "<rootDir>/src/style$1",
+      "^@assets(.*)$": "<rootDir>/src/assets$1"
+    }
   }
 }

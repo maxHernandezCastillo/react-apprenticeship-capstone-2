@@ -1,0 +1,35 @@
+.date-chooser-component {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (width <= 720px) {
+  .date-chooser-component {
+    width: 100%;
+    height: min-content;
+    overflow-y: visible;
+  }
+}
+
+.date-chooser-component--closed {
+  display: none;
+}
+
+.date-chooser-component__header {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--cool-gray-100);
+  user-select: none;
+}
+
+.date-chooser-component__icon-button {
+  align-items: center;
+}
